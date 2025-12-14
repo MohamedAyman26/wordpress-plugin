@@ -1,0 +1,314 @@
+
+/* Global wrapper */
+.pbm-wrapper {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 24px 26px 28px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Header */
+.pbm-header {
+    margin-bottom: 18px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+.pbm-header h2 {
+    margin: 0 0 4px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+}
+.pbm-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* Form layout */
+.pbm-horizontal {
+    margin-top: 10px;
+}
+.pbm-row {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 16px;
+}
+.pbm-row-submit {
+    justify-content: flex-end;
+}
+.pbm-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.pbm-field label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #334155;
+}
+.pbm-field input {
+    padding: 11px 13px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.pbm-field input:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.25);
+}
+
+/* Radio group */
+.pbm-radio-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    background: #f1f5f9;
+    font-size: 14px;
+    color: #0f172a;
+}
+.pbm-radio-group input[type="radio"] {
+    margin-right: 6px;
+}
+
+/* Submit button */
+.pbm-submit {
+    padding: 12px 28px;
+    background: #1e3a8a;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.15s ease;
+    box-shadow: 0 8px 18px rgba(30, 64, 175, 0.35);
+}
+.pbm-submit:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(30, 64, 175, 0.4);
+}
+.pbm-submit:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 16px rgba(30, 64, 175, 0.3);
+}
+
+/* Messages */
+.pbm-success,
+.pbm-error {
+    max-width: 1100px;
+    margin: 10px auto 0;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+.pbm-success {
+    border: 1px solid #16a34a;
+    background: #dcfce7;
+    color: #166534;
+}
+.pbm-error {
+    border: 1px solid #b91c1c;
+    background: #fee2e2;
+    color: #7f1d1d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pbm-wrapper {
+        margin: 16px;
+        padding: 18px 16px 22px;
+    }
+    .pbm-row {
+        flex-direction: column;
+    }
+    .pbm-row-submit {
+        justify-content: flex-start;
+    }
+    .pbm-submit {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.pbm-total-row {
+    justify-content: flex-end;
+}
+
+.pbm-total-box {
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px dashed #cbd5e1;
+    background: #f8fafc;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    font-size: 14px;
+}
+
+.pbm-total-label {
+    font-weight: 600;
+    color: #0f172a;
+    margin-right: 6px;
+}
+
+.pbm-total-value {
+    font-weight: 700;
+    font-size: 16px;
+    color: #1e3a8a;
+}
+
+.pbm-total-details {
+    font-size: 12px;
+    color: #64748b;
+}
+@media (max-width: 768px) {
+    .pbm-total-row {
+        justify-content: flex-start;
+    }
+}
+
+/* === LINE FORM (PARKOS STYLE) === */
+
+.pbm-line-form {
+    margin-top: 12px;
+}
+
+.pbm-line-scroll {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Hide ugly scrollbar in most browsers */
+.pbm-line-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+.pbm-line-scroll::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 999px;
+}
+.pbm-line-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.pbm-line-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+}
+
+.pbm-line-item label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 4px;
+    white-space: nowrap;
+}
+
+/* Inputs & selects */
+.pbm-line-item input,
+.pbm-line-item select {
+    height: 46px;
+    padding: 0 12px;
+    font-size: 14px;
+    border-radius: 999px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    white-space: nowrap;
+}
+
+.pbm-line-item input:focus,
+.pbm-line-item select:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.15);
+}
+
+/* Total box inline */
+.pbm-total-box-inline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    min-width: 150px;
+}
+
+.pbm-total-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+.pbm-total-details {
+    font-size: 11px;
+    color: #64748b;
+}
+
+/* Button */
+.pbm-line-button {
+    min-width: 160px;
+}
+
+.pbm-submit {
+    height: 46px;
+    padding: 0 22px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.35);
+    transition: transform 0.1s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    white-space: nowrap;
+}
+
+.pbm-submit:hover {
+    filter: brightness(1.05);
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.45);
+}
+
+.pbm-submit:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .pbm-wrapper {
+        margin: 12px;
+        padding: 16px;
+    }
+    .pbm-header h2 {
+        font-size: 18px;
+    }
+}
